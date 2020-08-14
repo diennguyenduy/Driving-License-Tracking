@@ -1,5 +1,5 @@
 # name: "Orguidai Client"
-version: "1.0"
+version: '1.0'
 
 certificateAuthorities:
   ca.example.com:
@@ -12,7 +12,7 @@ certificateAuthorities:
       - enrollId: admin
         enrollSecret: adminpw
     caName: ca-orgorderer
-  
+
   ca.orguidai.example.com:
     url: http://localhost:7054
     httpOptions:
@@ -38,15 +38,15 @@ certificateAuthorities:
 client:
   - organization: Orguidai
     credentialStore:
-      path: "../nodeserver/nodejsfiles/hfc-key-store"
+      path: '../nodeserver/nodejsfiles/hfc-key-store'
       cryptoStore:
-        path: "../nodeserver/nodejsfiles/hfc-key-store"
+        path: '../nodeserver/nodejsfiles/hfc-key-store'
   - organization: Orgdl
     credentialStore:
-      path: "../nodeserver/nodejsfiles/hfc-key-store"
+      path: '../nodeserver/nodejsfiles/hfc-key-store'
       cryptoStore:
-        path: "../nodeserver/nodejsfiles/hfc-key-store"
-      
+        path: '../nodeserver/nodejsfiles/hfc-key-store'
+
 channels:
   channelboth:
     orderers:
@@ -91,7 +91,7 @@ organizations:
     certificateAuthorities:
       - ca.orguidai.example.com
     adminPrivateKey:
-      path: ../basic-network/crypto-config/peerOrganizations/orguidai.example.com/users/Admin@orguidai.example.com/msp/keystore/a1b27c249ea3fd0916794912e845068eb83e92b998c3de63c2809a054d0c3518_sk
+      path: ../basic-network/crypto-config/peerOrganizations/orguidai.example.com/users/Admin@orguidai.example.com/msp/keystore/0faa7eb5feaeedf94adb73e732b4512a77deabf1aaca03780ac67c670ba4d36d_sk
     signedCert:
       path: ../basic-network/crypto-config/peerOrganizations/orguidai.example.com/users/Admin@orguidai.example.com/msp/signcerts/Admin@orguidai.example.com-cert.pem
 
@@ -102,7 +102,7 @@ organizations:
     certificateAuthorities:
       - ca.orgdl.example.com
     adminPrivateKey:
-      path: ../basic-network/crypto-config/peerOrganizations/orgdl.example.com/users/Admin@orgdl.example.com/msp/keystore/c0d783646debf47c68c78cfd05d5d8a250fe28d891f80829d3125910f7fc4fde_sk
+      path: ../basic-network/crypto-config/peerOrganizations/orgdl.example.com/users/Admin@orgdl.example.com/msp/keystore/3cf53e01da44f504fa0b719046f1b22610d3d39de28485bf10ef9109958adbce_sk
     signedCert:
       path: ../basic-network/crypto-config/peerOrganizations/orgdl.example.com/users/Admin@orgdl.example.com/msp/signcerts/Admin@orgdl.example.com-cert.pem
 
@@ -127,4 +127,3 @@ peers:
   peer0.orgdl.example.com:
     url: grpc://localhost:8051
     eventUrl: grpc://localhost:8053
-    

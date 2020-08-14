@@ -1,12 +1,18 @@
-<h1>Please fill vehicle details </h1>
+<h1>Please fill vehicle details</h1>
 
-<form [formGroup]="noVehicles" method="POST" *ngIf = "!disableCount">
-  How many vehicles do you have : <input type="number" [formControl] = "noVehicles"/> <br><br>
-  <button [disabled] = "!noVehicles.valid" (click) = "disableCount = true; initializeArray();">Next</button>
+<form [formGroup]="noVehicles" method="POST" *ngIf="!disableCount">
+  How many vehicles do you have :
+  <input type="number" [formControl]="noVehicles" /> <br /><br />
+  <button
+    [disabled]="!noVehicles.valid"
+    (click)="disableCount = true; initializeArray()"
+  >
+    Next
+  </button>
 </form>
 
-<div *ngIf = "start">
-<p *ngFor = "let count of vehicles" >{{count}}</p>
+<div *ngIf="start">
+  <p *ngFor="let count of vehicles">{{ count }}</p>
 </div>
 <!-- 
 <form [formGroup]="form" method="POST">
