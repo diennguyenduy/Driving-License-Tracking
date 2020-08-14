@@ -1,0 +1,6 @@
+*channel-artifacts*
+*node_modules*
+*nohup.out*
+*hfc-key-store*
+*configtxlator*
+*.vscode*
